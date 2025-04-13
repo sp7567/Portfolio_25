@@ -1066,26 +1066,74 @@ form .button-area {
 /* RESPONSIVE MEDIA QUERIES
 /* ---------------------- */
 
-/* For devices with max-width: 768px (tablets and small desktops) */
-/* ========== Responsive Design ========== */
+/* For devices with max-width: 991px (tablets and small desktops) */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
 
-/* Medium Devices (Tablets and below) *//* ========== RESPONSIVE DESIGN ========== */
+  header {
+    padding: 1.5rem 5%;
+  }
 
-/* Medium Devices - Tablets (<= 991px) *//* Mobile Navbar Menu Toggle */
-header #menu {
-  font-size: 2.5rem;
-  cursor: pointer;
-  display: none;
-  z-index: 1001;
+  .home {
+    margin-left: 0;
+    padding: 2rem 5%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home .image img {
+    width: 60%;
+    margin-left: 0;
+  }
+
+  .home .btn {
+    position: static;
+    margin-top: 2rem;
+  }
+
+  .about .row {
+    flex-direction: column;
+    gap: 5rem;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .about .row .image img {
+    width: 60%;
+    height: auto;
+    margin: 2rem auto;
+  }
+
+  /* Responsive adjustments for Skills Section */
+  .skills .container {
+    width: 95%;
+    padding: 1rem;
+  }
+  .skills .container .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Responsive adjustments for Education Section */
+  .education .box-container .box {
+    width: 95%;
+    flex-direction: column;
+  }
+  .education .box-container .box .image,
+  .education .box-container .box .content {
+    flex: 1 1 100%;
+  }
+  .education .box-container .box .content {
+    text-align: center;
+    padding: 1rem;
+  }
 }
 
-/* Hide menu items by default on mobile */
-header .navbar {
-  display: flex;
-}
-
+/* Small Devices - Phones (<= 768px) */
 @media (max-width: 768px) {
-  header #menu {
+  #menu {
     display: block;
   }
 
@@ -1094,22 +1142,73 @@ header .navbar {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #ffffff;
+    background-color: white;
     flex-direction: column;
     align-items: center;
     display: none;
   }
 
-  header .navbar.active {
-    display: flex;
-  }
-
   header .navbar ul {
     flex-direction: column;
+    width: 100%;
     padding: 1rem 0;
   }
 
-  header .navbar ul li {
+  header .navbar li {
     margin: 1.5rem 0;
+  }
+
+  header.active .navbar {
+    display: flex;
+  }
+
+  .home .image img {
+    width: 80%;
+  }
+
+  .socials {
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  /* Further adjustments for Skills Section */
+  .skills .container .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Extra Small Devices (<= 480px) */
+@media (max-width: 480px) {
+  .home .content h2 {
+    font-size: 3.5rem;
+  }
+
+  .home .content h2 span {
+    font-size: 3.5rem;
+  }
+
+  .home .content p,
+  .home .content p span {
+    font-size: 1.8rem;
+  }
+
+  .home .btn span {
+    font-size: 1.5rem;
+  }
+
+  .about .row .image img {
+    width: 80%;
+  }
+
+  .social-icons a {
+    width: 36px;
+    height: 36px;
+    font-size: 1.6rem;
+    line-height: 36px;
+  }
+
+  /* Small device tweaks for Education Section */
+  .education h4, .education .qoute {
+    font-size: 1.8rem;
   }
 }
