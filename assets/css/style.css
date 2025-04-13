@@ -1501,18 +1501,29 @@ form .button-area {
     min-width: 48px;
     min-height: 48px;
   }
-  
+
   .social-icons a {
     width: 48px;
     height: 48px;
     line-height: 48px;
   }
-  
+
   .work .desc .btns .btn {
     padding: 1.2rem 2rem;
   }
-  
+
   .button-area button {
     padding: 1.2rem 2rem;
+  }
+
+  /* Fix duplicate About button - hide the duplicate */
+  .about-button-duplicate {
+    display: none !important;
+  }
+
+  /* Improve Education section height */
+  .education {
+    min-height: 300px; /* Increase height */
+    padding: 2rem 1rem;
   }
 }
