@@ -1194,13 +1194,20 @@ form .button-area {
   }
 }
 
-/* Mobile Responsive Styles */
+/* ==================== */
+/* MOBILE RESPONSIVE CSS */
+/* ==================== */
+
 @media (max-width: 768px) {
   /* General Styles */
   html {
     font-size: 55%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+  }
+  
+  body {
+    padding-right: 0;
   }
   
   section {
@@ -1212,14 +1219,17 @@ form .button-area {
     font-size: 2.8rem;
     margin-bottom: 3rem;
   }
-  
+
   /* Navbar */
   header {
     padding: 1.7rem 5%;
+    height: auto;
+    flex-wrap: wrap;
   }
   
   #menu {
     display: block;
+    order: 1;
   }
   
   header .navbar {
@@ -1232,6 +1242,7 @@ form .button-area {
     flex-direction: column;
     justify-content: flex-start;
     transition: 0.3s;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
   }
   
   header .navbar.active {
@@ -1246,99 +1257,121 @@ form .button-area {
   
   header .navbar ul li {
     margin: 1rem 0;
+    width: 100%;
     text-align: center;
   }
   
   header .navbar ul li a {
     font-size: 2rem;
-    color: #0e2431;
     display: block;
     padding: 1rem 2rem;
+    border-bottom: none;
   }
   
   header .navbar ul li a.active,
   header .navbar ul li a:hover {
     color: #fff;
     background: #011aff;
-    border-bottom: none;
+    padding: 1rem 2rem;
   }
-  
+
   /* Hero Section */
   .home {
     margin-left: 0;
     text-align: center;
     flex-direction: column-reverse;
     padding-top: 8rem;
+    gap: 2rem;
   }
   
   .home .content {
-    padding-top: 2rem;
+    padding-top: 0;
   }
   
   .home .content h2,
   .home .content h2 span {
     font-size: 3.5rem;
+    line-height: 1.2;
   }
   
   .home .content p,
   .home .content p span {
     font-size: 2rem;
+    line-height: 1.5;
   }
   
   .home .image img {
     width: 70%;
+    max-width: 250px;
     margin: 0 auto;
   }
   
   .home .btn {
     position: relative;
     margin: 2rem auto;
-    min-width: 48px;
-    min-height: 48px;
-    line-height: 48px;
+    width: auto;
+    display: inline-block;
   }
   
   .socials {
-    margin-top: 4rem;
+    margin-top: 3rem;
     justify-content: center;
   }
-  
+
   /* About Section */
   .about .row {
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     padding: 1rem;
   }
   
   .about .row .image {
-    flex: 1 1 100%;
+    text-align: center;
   }
   
   .about .row .image img {
     width: 90%;
+    max-width: 300px;
     height: auto;
     margin: 0 auto;
   }
   
   .about .row .content {
-    flex: 1 1 100%;
     padding: 1rem;
   }
   
-  .resumebtn {
-    margin-top: 3rem;
+  .about .row .content h3 {
     text-align: center;
   }
   
+  .about .row .content .tag {
+    text-align: center;
+  }
+  
+  .resumebtn {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .resumebtn .btn {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
   /* Skills Section */
   .skills .container {
     width: 95%;
-    padding: 1rem;
+    padding: 1.5rem;
   }
   
   .skills .container .row {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .skills .container .bar {
+    margin-bottom: 1rem;
+    padding: 1rem;
   }
   
   .skills .container .bar .info i {
@@ -1348,16 +1381,19 @@ form .button-area {
   .skills .container .bar .info span {
     font-size: 1.5rem;
   }
-  
+
   /* Projects Section */
   .project-container {
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
+    padding: 1rem;
   }
   
   .project1 {
     width: 90%;
-    margin-bottom: 3rem;
+    max-width: 350px;
+    margin: 0 auto 2rem;
   }
   
   .project1 img {
@@ -1366,44 +1402,48 @@ form .button-area {
   
   .project1 h2 {
     font-size: 2.2rem;
+    margin: 1.5rem 0 1rem;
   }
   
   .project1 p {
     font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  /* Education Section */
+  .education .box-container {
+    padding: 1rem;
   }
   
-  /* Education Section */
   .education .box-container .box {
     flex-direction: column;
-    width: 90%;
+    width: 100%;
+    margin-top: 1.5rem;
   }
   
   .education .box-container .box .image {
-    width: 100%;
-    height: 25rem;
+    height: 18rem;
   }
   
   .education .box-container .box .content {
-    padding: 2rem;
+    padding: 1.5rem;
   }
   
   .education .box-container .box .content h3 {
     font-size: 2rem;
-    text-align: center;
-  }
-  
-  .education .box-container .box .content p {
     text-align: center;
     margin-left: 0;
   }
   
   .education h4 {
     text-align: center;
+    margin: 1rem 0;
   }
-  
+
   /* Contact Section */
   .contact .container {
-    margin: 2rem;
+    margin: 1rem;
+    width: auto;
   }
   
   .contact .content {
@@ -1420,15 +1460,23 @@ form .button-area {
     margin-right: 0;
   }
   
-  form .field input,
-  form .message textarea {
-    font-size: 1.4rem;
-    min-height: 48px;
+  form .form-group .field {
+    margin: 1rem 0;
+    height: 45px;
   }
   
+  form .message {
+    margin: 1rem 0;
+  }
+  
+  .button-area {
+    justify-content: center;
+  }
+
   /* Footer */
   .footer .box-container {
     flex-direction: column;
+    padding: 1rem;
   }
   
   .footer .box-container .box {
@@ -1436,14 +1484,12 @@ form .button-area {
     text-align: center;
   }
   
-  .footer .box-container .box .share {
-    justify-content: center;
+  .footer .box-container .box h3 {
+    font-size: 2.2rem;
   }
   
-  .footer .box-container .box .share a {
-    min-width: 48px;
-    min-height: 48px;
-    line-height: 48px;
+  .footer .box-container .box .share {
+    justify-content: center;
   }
 }
 
@@ -1454,7 +1500,7 @@ form .button-area {
   }
   
   section {
-    padding: 2rem 1rem;
+    padding: 1.5rem;
   }
   
   .home .content h2,
@@ -1476,43 +1522,75 @@ form .button-area {
     grid-template-columns: 1fr;
   }
   
+  .education .box-container .box .image {
+    height: 15rem;
+  }
+  
   .project1 {
     width: 95%;
   }
   
-  .education .box-container .box {
-    width: 95%;
-  }
-  
   .contact .container {
-    margin: 1rem;
+    margin: 0.5rem;
   }
   
   #scroll-top {
     right: 1rem;
+    bottom: 1rem;
     padding: 0.8rem 1.2rem;
     font-size: 1.8rem;
   }
 }
 
-/* Touch Target Sizes for Mobile */
+/* Touch Target Improvements */
 @media (max-width: 768px) {
-  .btn, a {
-    min-width: 48px;
-    min-height: 48px;
+  .btn, a, button {
+    min-width: 44px;
+    min-height: 44px;
+    line-height: 44px;
   }
   
   .social-icons a {
-    width: 48px;
-    height: 48px;
-    line-height: 48px;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 1.8rem;
   }
   
   .work .desc .btns .btn {
     padding: 1.2rem 2rem;
+    margin-right: 1rem;
   }
   
   .button-area button {
-    padding: 1.2rem 2rem;
+    padding: 1.2rem 2.5rem;
   }
+  
+  .project-link a {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Education Section Specific Fixes */
+.education .box-container .box {
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.education .box-container .box .image {
+  flex: 0 0 auto;
+}
+
+/* About Section Single Button Fix */
+.about .resumebtn {
+  margin: 2rem auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.about .btn {
+  margin: 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
