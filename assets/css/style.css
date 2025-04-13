@@ -1507,6 +1507,11 @@ form .button-area {
     height: 48px;
     line-height: 48px;
   }
+  .box{
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+  }
 
   .work .desc .btns .btn {
     padding: 1.2rem 2rem;
