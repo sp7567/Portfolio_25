@@ -1067,11 +1067,15 @@ form .button-area {
 /* ---------------------- */
 
 /* For devices with max-width: 768px (tablets and small desktops) */
+/* ========== Responsive Design ========== */
+
+/* Medium Devices (Tablets and below) */
 @media (max-width: 768px) {
-  /* Navbar adjustments */
+  /* Navbar */
   #menu {
     display: block;
   }
+
   header .navbar {
     position: fixed;
     top: 6.5rem;
@@ -1082,145 +1086,166 @@ form .button-area {
     text-align: left;
     align-items: flex-start;
     transition: right 0.3s ease;
+    z-index: 999;
   }
+
   header .navbar ul {
     display: grid;
     padding: 1rem;
+    margin: 0;
   }
+
   header .navbar ul li {
-    text-align: center;
     width: 100%;
     margin: 1rem 0;
     border-radius: 0.5rem;
-    width: 26rem;
+    text-align: center;
   }
+
   header .navbar ul li a {
     display: block;
     padding: 1rem;
-    text-align: left;
-    color: #fff;
     font-size: 2.2rem;
+    color: #fff;
+    text-align: left;
+    border-radius: 0.5rem;
   }
+
   header .navbar ul li a.active {
     border-bottom: 0.5rem solid #26a375;
-    padding: 1rem;
-    color: #fff;
-    border-radius: 0.5rem;
   }
+
   header .navbar ul li a:hover {
-    padding: 1rem;
-    color: #fff;
-    border-radius: 0.5rem;
     border-bottom: 0.5rem solid #015eff;
   }
+
   .fa-times {
     transform: rotate(180deg);
   }
+
   header .navbar.nav-toggle {
     right: 0;
   }
-  
-  /* Adjust Hero Section */
+
+  /* Home Section */
   .home {
     flex-direction: column;
     margin-left: 0;
   }
+
   .home .image img {
-    margin: 0 auto;
     width: 80%;
-    margin-top: 2rem;
+    margin: 2rem auto 0;
   }
+
   .home .content h2,
   .home .content p {
     text-align: center;
   }
-  
+
   /* About Section */
   .about .row {
     flex-direction: column;
     padding: 1rem;
     gap: 2rem;
   }
+
   .about .row .image img {
     width: 90%;
     margin: 0 auto;
   }
+
   .about .row .content {
     padding: 1rem;
   }
-  
-  /* Skills Grid adjust */
+
+  /* Skills Section */
   .skills .container .row {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
-  
-  /* Project Section */
+
+  /* Projects Section */
   .project-container {
     flex-direction: column;
     align-items: center;
   }
+
   .project1 {
     width: 90%;
   }
-  
+
   /* Education Section */
   .education .box-container .box {
     flex-direction: column;
     width: 100%;
   }
+
   .education .box-container .box .image {
     width: 100%;
     height: 25rem;
   }
-  
+
   /* Contact Section */
   .contact .container {
     margin: 3rem 2rem;
   }
+
   .contact .content {
     flex-direction: column;
     padding: 1rem;
   }
+
   .contact .content .image-box {
     display: none;
   }
+
   form .form-group .field {
     margin: 1rem 0;
   }
-  
+
   /* Footer */
   .footer .box-container .box {
     margin: 1.5rem;
   }
 }
 
-/* For devices with max-width: 450px (small smartphones) */
+/* Small Devices (Mobile Phones) */
 @media (max-width: 450px) {
   html {
     font-size: 55%;
   }
+
   body {
     padding-right: 0;
   }
+
   section {
     padding: 2rem;
   }
+
   .home .btn {
     margin: 4rem 0;
   }
+
   .socials {
     margin-top: 2rem;
   }
+
   .home .image img {
     margin-top: -12rem;
   }
+
   .home .content p,
   .home .content p span {
     font-size: 2.2rem;
   }
+
   .footer .box-container .box p {
     padding: 0.7rem;
   }
+
   .footer .box-container .box .share a {
     padding: 1.2rem;
   }
