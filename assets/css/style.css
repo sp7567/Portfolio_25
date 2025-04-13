@@ -377,7 +377,7 @@ section {
 }
 .skills .container .bar:hover {
   box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
-  background-color: rgba(12, 17, 26, 0.9) !important;
+  background-color: rgba(255, 21, 21, 0.9) !important;
 }
 .skills .container .bar .info {
   display: flex;
@@ -1065,124 +1065,163 @@ form .button-area {
 /* ---------------------- */
 /* RESPONSIVE MEDIA QUERIES
 /* ---------------------- */
-/* Responsive for Tablets and below */
-@media (max-width: 1024px) {
-  html {
-    font-size: 58%;
-  }
 
-  header {
-    padding: 1.5rem 5%;
-  }
-
-  .home {
-    margin-left: 0;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .home .image img {
-    margin-left: 0;
-    width: 50%;
-  }
-
-  .about .row {
-    flex-direction: column;
-    gap: 4rem;
-  }
-
-  .about .row .image img {
-    width: 80%;
-    height: auto;
-  }
-
-  .skills .container .row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .project-container {
-    justify-content: center;
-  }
-}
-
-/* Responsive for Mobile Devices */
+/* For devices with max-width: 768px (tablets and small desktops) */
 @media (max-width: 768px) {
-  html {
-    font-size: 55%;
-  }
-
+  /* Navbar adjustments */
   #menu {
     display: block;
   }
-
   header .navbar {
-    position: absolute;
+    position: fixed;
     top: 6.5rem;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    display: none;
-    flex-direction: column;
-    align-items: center;
+    right: -150%;
+    width: 50%;
+    height: 100%;
+    background-color: #0e0f31;
+    text-align: left;
+    align-items: flex-start;
+    transition: right 0.3s ease;
   }
-
   header .navbar ul {
-    flex-direction: column;
-    width: 100%;
+    display: grid;
+    padding: 1rem;
   }
-
   header .navbar ul li {
-    margin: 1.5rem 0;
+    text-align: center;
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    width: 26rem;
   }
-
   header .navbar ul li a {
+    display: block;
+    padding: 1rem;
+    text-align: left;
+    color: #fff;
     font-size: 2.2rem;
   }
-
-  .home .btn {
-    position: static;
-    margin: 2rem auto 0 auto;
+  header .navbar ul li a.active {
+    border-bottom: 0.5rem solid #26a375;
+    padding: 1rem;
+    color: #fff;
+    border-radius: 0.5rem;
   }
-
-  .skills .container .row {
-    grid-template-columns: 1fr;
+  header .navbar ul li a:hover {
+    padding: 1rem;
+    color: #fff;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid #015eff;
   }
-
-  .project1 {
+  .fa-times {
+    transform: rotate(180deg);
+  }
+  header .navbar.nav-toggle {
+    right: 0;
+  }
+  
+  /* Adjust Hero Section */
+  .home {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .home .image img {
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 2rem;
+  }
+  .home .content h2,
+  .home .content p {
+    text-align: center;
+  }
+  
+  /* About Section */
+  .about .row {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+  }
+  .about .row .image img {
     width: 90%;
+    margin: 0 auto;
   }
-
   .about .row .content {
     padding: 1rem;
   }
+  
+  /* Skills Grid adjust */
+  .skills .container .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Project Section */
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project1 {
+    width: 90%;
+  }
+  
+  /* Education Section */
+  .education .box-container .box {
+    flex-direction: column;
+    width: 100%;
+  }
+  .education .box-container .box .image {
+    width: 100%;
+    height: 25rem;
+  }
+  
+  /* Contact Section */
+  .contact .container {
+    margin: 3rem 2rem;
+  }
+  .contact .content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .contact .content .image-box {
+    display: none;
+  }
+  form .form-group .field {
+    margin: 1rem 0;
+  }
+  
+  /* Footer */
+  .footer .box-container .box {
+    margin: 1.5rem;
+  }
 }
 
-/* Very small devices */
-@media (max-width: 480px) {
+/* For devices with max-width: 450px (small smartphones) */
+@media (max-width: 450px) {
   html {
-    font-size: 50%;
+    font-size: 55%;
   }
-
-  .home .content h2,
-  .home .content h2 span {
-    font-size: 4rem;
+  body {
+    padding-right: 0;
   }
-
+  section {
+    padding: 2rem;
+  }
+  .home .btn {
+    margin: 4rem 0;
+  }
+  .socials {
+    margin-top: 2rem;
+  }
+  .home .image img {
+    margin-top: -12rem;
+  }
   .home .content p,
   .home .content p span {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
-
-  .skills .container {
-    padding: 1rem;
-    width: 95%;
+  .footer .box-container .box p {
+    padding: 0.7rem;
   }
-
-  .project1 p {
-    font-size: 1.4rem;
-  }
-
-  .about .row .image img {
-    width: 90%;
+  .footer .box-container .box .share a {
+    padding: 1.2rem;
   }
 }
