@@ -1507,10 +1507,11 @@ form .button-area {
     height: 48px;
     line-height: 48px;
   }
-  .box{
-    height: 100%;
+  .box {
     width: 100%;
+    height: fit-content; /* Allows height to grow based on content */
     padding: 1rem;
+    box-sizing: border-box; /* Ensures padding is included in width/height */
   }
 
   .work .desc .btns .btn {
