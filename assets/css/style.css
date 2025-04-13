@@ -1065,11 +1065,10 @@ form .button-area {
 /* ---------------------- */
 /* RESPONSIVE MEDIA QUERIES
 /* ---------------------- */
-
-/* For devices with max-width: 991px (tablets and small desktops) */
-@media (max-width: 991px) {
+/* Responsive for Tablets and below */
+@media (max-width: 1024px) {
   html {
-    font-size: 55%;
+    font-size: 58%;
   }
 
   header {
@@ -1078,137 +1077,112 @@ form .button-area {
 
   .home {
     margin-left: 0;
-    padding: 2rem 5%;
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
 
   .home .image img {
-    width: 60%;
     margin-left: 0;
-  }
-
-  .home .btn {
-    position: static;
-    margin-top: 2rem;
+    width: 50%;
   }
 
   .about .row {
     flex-direction: column;
-    gap: 5rem;
-    padding: 2rem;
-    text-align: center;
+    gap: 4rem;
   }
 
   .about .row .image img {
-    width: 60%;
+    width: 80%;
     height: auto;
-    margin: 2rem auto;
   }
 
-  /* Responsive adjustments for Skills Section */
-  .skills .container {
-    width: 95%;
-    padding: 1rem;
-  }
   .skills .container .row {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Responsive adjustments for Education Section */
-  .education .box-container .box {
-    width: 95%;
-    flex-direction: column;
-  }
-  .education .box-container .box .image,
-  .education .box-container .box .content {
-    flex: 1 1 100%;
-  }
-  .education .box-container .box .content {
-    text-align: center;
-    padding: 1rem;
+  .project-container {
+    justify-content: center;
   }
 }
 
-/* Small Devices - Phones (<= 768px) */
+/* Responsive for Mobile Devices */
 @media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
   #menu {
     display: block;
   }
 
   header .navbar {
     position: absolute;
-    top: 100%;
+    top: 6.5rem;
     left: 0;
-    right: 0;
-    background-color: white;
+    width: 100%;
+    background: #fff;
+    display: none;
     flex-direction: column;
     align-items: center;
-    display: none;
   }
 
   header .navbar ul {
     flex-direction: column;
     width: 100%;
-    padding: 1rem 0;
   }
 
-  header .navbar li {
+  header .navbar ul li {
     margin: 1.5rem 0;
   }
 
-  header.active .navbar {
-    display: flex;
+  header .navbar ul li a {
+    font-size: 2.2rem;
   }
 
-  .home .image img {
-    width: 80%;
+  .home .btn {
+    position: static;
+    margin: 2rem auto 0 auto;
   }
 
-  .socials {
-    margin-top: 5rem;
-    text-align: center;
-  }
-
-  /* Further adjustments for Skills Section */
   .skills .container .row {
     grid-template-columns: 1fr;
   }
-}
 
-/* Extra Small Devices (<= 480px) */
-@media (max-width: 480px) {
-  .home .content h2 {
-    font-size: 3.5rem;
+  .project1 {
+    width: 90%;
   }
 
+  .about .row .content {
+    padding: 1rem;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+
+  .home .content h2,
   .home .content h2 span {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
   .home .content p,
   .home .content p span {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
-  .home .btn span {
-    font-size: 1.5rem;
+  .skills .container {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .project1 p {
+    font-size: 1.4rem;
   }
 
   .about .row .image img {
-    width: 80%;
-  }
-
-  .social-icons a {
-    width: 36px;
-    height: 36px;
-    font-size: 1.6rem;
-    line-height: 36px;
-  }
-
-  /* Small device tweaks for Education Section */
-  .education h4, .education .qoute {
-    font-size: 1.8rem;
+    width: 90%;
   }
 }
