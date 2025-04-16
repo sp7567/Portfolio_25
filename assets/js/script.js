@@ -223,3 +223,99 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
+
+
+
+
+
+
+
+
+// // 
+// let isVerified = false;
+// const encodedAdminMobile = btoa("7709472811");
+
+// // Functionality for Update Resume Button
+// document.getElementById('updateResumeBtn').addEventListener('click', function() {
+//   document.getElementById('registerSection').style.display = "block";  // Show registration box after clicking the update button
+// });
+
+// function registerUser() {
+//   const username = document.getElementById("regUsername").value;
+//   const password = document.getElementById("regPassword").value;
+
+//   if (username && password) {
+//     localStorage.setItem("validUsername", username);
+//     localStorage.setItem("validPassword", password);
+//     alert("User registered! Now login.");
+//     document.getElementById("registerSection").style.display = "none";
+//     document.getElementById("loginSection").style.display = "block";
+//   } else {
+//     alert("Please enter both username and password.");
+//   }
+// }
+
+// function verifyUser() {
+//   const storedUser = localStorage.getItem("validUsername");
+//   const storedPass = localStorage.getItem("validPassword");
+//   const inputUser = document.getElementById("username").value;
+//   const inputPass = document.getElementById("password").value;
+
+//   if (inputUser === storedUser && inputPass === storedPass) {
+//     if (!isVerified) {
+//       document.getElementById("adminVerifyModal").style.display = "block";
+//     } else {
+//       showResumePanel();
+//     }
+//   } else {
+//     alert("Invalid credentials ❌");
+//   }
+// }
+
+// function checkAdminMobile() {
+//   const enteredMobile = document.getElementById("adminMobileInput").value;
+//   if (btoa(enteredMobile) === encodedAdminMobile) {
+//     isVerified = true;
+//     alert("Admin verified ✅");
+//     document.getElementById("adminVerifyModal").style.display = "none";
+//     showResumePanel();
+//   } else {
+//     alert("Incorrect admin number ❌");
+//   }
+// }
+
+// function showResumePanel() {
+//   document.getElementById("registerSection").style.display = "none";
+//   document.getElementById("loginSection").style.display = "none";
+//   document.getElementById("adminVerifyModal").style.display = "none";
+//   document.getElementById("resumeSection").style.display = "block";
+//   document.getElementById("resumeButtonsSection").style.display = "block";
+// }
+
+// function viewResume() {
+//   const fileInput = document.getElementById("resumeUpload");
+//   const resumeView = document.getElementById("resumeView");
+//   const file = fileInput.files[0];
+
+//   if (file) {
+//     // Check if the file is a PDF
+//     if (file.type === "application/pdf") {
+//       const reader = new FileReader();
+//       reader.onload = function(event) {
+//         const fileURL = event.target.result;
+//         resumeView.innerHTML = `<iframe src="${fileURL}" width="100%" height="500px"></iframe>`;
+//       };
+//       reader.readAsDataURL(file);  // Convert the file to a data URL
+//     } else {
+//       alert("Please upload a PDF file.");
+//     }
+//   } else {
+//     alert("No file uploaded.");
+//   }
+// }
+
+// function deleteResume() {
+//   document.getElementById("resumeUpload").value = "";
+//   document.getElementById("resumeView").innerHTML = "";
+//   alert("Resume deleted.");
+// }
